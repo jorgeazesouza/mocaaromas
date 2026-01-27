@@ -1,0 +1,140 @@
+/* Propriedades da página */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --cor1: #DD4A16;
+    --cor2: #F7EBE1;
+    --cor3: #F9964A;
+
+    --font: 'Inter', sans-serif;
+    --font-estilizada: 'DM Serif Text', serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+p, a {
+    font-family: var(--font);
+}
+
+h1, h2 {
+    font-family: var(--font-estilizada);
+}
+
+/* Cabeçalho */
+
+header {
+    background-color: var(--cor2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+}
+
+header picture, nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    height: 5vh;
+}
+
+header nav > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font);
+    color: var(--cor1);
+    height: 100%;
+    padding: 0px 2em;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+}
+
+header nav > a::after {
+    content: " ";
+    width: 0%;
+    height: 3px;
+    background-color: var(--cor1);
+    bottom: 0;
+    left: 50%;
+    position: absolute;
+    transition: all 0.5s ease;
+    transform: translateX(-50%);
+}
+
+header nav > a:hover:after {
+    width: 100%;
+}
+
+header nav > a:hover {
+    font-weight: 700;
+}
+
+#icon {
+    display: none;
+    cursor: pointer;
+    text-align: end;
+}
+
+menu {
+    position: absolute;
+    top: 0;
+    background-color: var(--cor3);
+    height: 100vh;
+    width: 80vw;
+    display: none;
+    cursor: pointer;
+    list-style: none;
+    padding: 10px 10px;
+    margin: 0px;
+    transition: width 2s;
+}
+
+menu ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+menu li {
+    list-style: none;
+    height: 4vh;
+}
+
+menu li > a {
+    text-decoration: none;
+}
+
+/* Mobile Menu */
+
+@media (max-width: 650px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        
+    }
+    #icon {
+        display: block;  
+    }
+
+    .navBar {
+        display: none;
+    }
+}
