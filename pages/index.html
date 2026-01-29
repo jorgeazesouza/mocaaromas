@@ -4,37 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moça Aromas</title>
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menuclose" />
-
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/header.css">
 </head>
 <body>
-    <header class="header">
-        <span id="icon" onclick="clickMenu()"><img src="img/menu.png" alt="Imagem Menu"></span>
+    <header>
         <picture>
             <source media="(max-width: 1050px)" srcset="img/logo-mocaaromas-p.png" type="image/png">
             <img src="img/logo-mocaaromas.png" alt="Logo Moça Aromas">
         </picture>
         <nav class="navBar">
-            <a href="#" class="navBarLink">INICIO</a>
-            <a href="#" class="navBarLink">PRODUTOS</a>
-            <a href="#" class="navBarLink">CONTATO</a>
-            <a href="#" class="navBarLink">QUEM SOMOS</a>
+            <div class="menu">
+                <img src="img/menu.png" alt="Menu Icon" class="menu">
+            </div>
+            <ul class="navBarList">
+                <li><a href="#" class="navBarLink">INICIO</a></li>
+                <li><a href="#" class="navBarLink">PRODUTOS</a></li>
+                <li><a href="#" class="navBarLink">CONTATO</a></li>
+                <li><a href="#" class="navBarLink">QUEM SOMOS</a></li>
+            </ul>
         </nav>
     </header>
-    <menu id="itens">
-        <span id="icon" onclick="clickMenu()"><img src="img/close.png" alt="Imagem Close"></span>
-        <ul>
-            <li><a href="#" class="navBarLink">INICIO</a></li>
-            <li><a href="#" class="navBarLink">PRODUTOS</a></li>
-            <li><a href="#" class="navBarLink">CONTATO</a></li>
-            <li><a href="#" class="navBarLink">QUEM SOMOS</a></li>
-        </ul>
-    </menu>
     <main>
         
     </main>
-    <script src="script/script.js"></script>
+    <script src="script/header.js"></script>
 </body>
 </html>
